@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import axios from 'axios';
 
 const AddNote = styled.div`
-    border: 1px solid black;
-    margin-left: 20%;
     height: 100vh
 `;
 const Heading = styled.h2`

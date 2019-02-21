@@ -42,6 +42,27 @@ const NotesContainer = styled.div`
   color: gray;
 `;
 
+const NewNote = styled.a`
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    text-decoration: none;
+`;
+
+const WhoLogin = styled.h2`
+    font-size: 15px;
+    text-decoration: none;
+`;
+
+const WhoLogout = styled.h2`
+    font-size: 15px;
+    text-decoration: none;
+`;
+
+const TopHeader = styled.div`
+    display: flex;
+    justify-content: space-around;
+`;
 
 export default class Notes extends Component {
     constructor(props) {
@@ -103,6 +124,11 @@ export default class Notes extends Component {
     render() {
         return (
             <NotesContainer>
+                <TopHeader>
+                    <WhoLogin>Currently Login as: {localStorage.getItem('my_username')}</WhoLogin>
+                    <WhoLogout onClick={this.logout}>logout</WhoLogout>
+                </TopHeader>
+                <NewNote href='/new'>Create New Note</NewNote>
                 <Heading>Your Notes:</Heading>
                 <NotesDisplay>
                     {this.state.notes.map(note => {

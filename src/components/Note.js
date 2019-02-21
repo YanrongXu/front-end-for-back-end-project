@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 import DeleteModal from './DeleteModal'
-import EditForm from './EditForm'
 
 
 const ViewContainer = styled.div`

@@ -44,6 +44,7 @@ export default class Login extends Component {
     render() {
         return (
             <div className='login-page'>
+            <a className='Signup' href='/signup'>Signup</a>
             <h1>Lambda Note</h1>
             <p>Login to see the Note</p>
                 <form classname='login-form' onSubmit={this.submitHandler}>
