@@ -45,7 +45,7 @@ class EditForm extends Component {
     }
 
     handleInputChange = event => {
-        this.setState({ [event.target.name]: event.target.value })
+        this.setState({ [event.target.name]: event.target.value });
     }
 
     updateNote = event => {
