@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 import DeleteModal from './DeleteModal'
+import bcrypt from 'bcryptjs';
 
 
 const ViewContainer = styled.div`

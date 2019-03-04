@@ -87,7 +87,7 @@ export default class Notes extends Component {
         }
 
         if(token) {
-            axios.post('https://backend-project-yanrong.herokuapp.com/api/notes',postUsername, options)
+            axios.post('https://backend-project-yanrong.herokuapp.com/api/notes',token, options)
                 .then(res => {
                     console.log(res.data)
                     if(res.status === 200 && res.data) {

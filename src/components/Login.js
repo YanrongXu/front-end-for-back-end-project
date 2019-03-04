@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import "./Login.css";
+import bcrypt from 'bcryptjs';
 
 const initalUser = {
     username: '',
