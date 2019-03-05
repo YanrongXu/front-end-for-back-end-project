@@ -76,8 +76,8 @@ export default class Notes extends Component {
     authenticate = () => {
         const token = localStorage.getItem('my_token');
         const myusername = localStorage.getItem('my_username');
-        const postUsername = {
-            username: myusername
+        const postToken = {
+            token: token
         }
         const options = {
             headers: {
@@ -87,7 +87,7 @@ export default class Notes extends Component {
         }
 
         if(token) {
-            axios.post('https://backend-project-yanrong.herokuapp.com/api/notes',token, options)
+            axios.post('https://backend-project-yanrong.herokuapp.com/api/notes',postToken, options)
                 .then(res => {
                     console.log(res.data)
                     if(res.status === 200 && res.data) {
